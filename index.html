@@ -1,1 +1,51 @@
-damn i stole everything from you rn
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blunt Gang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        li {
+            flex: 0 0 auto;
+        }
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blunt gang</h1>
+    <ul id="avatarList"></ul>
+    <script>
+        const userIds = [169, 77, 177, 37, 38, 258];
+        const list = document.getElementById('avatarList');
+        userIds.forEach(id => {
+            const li = document.createElement('li');
+            const img = document.createElement('img');
+            img.src = `https://www.epik17.xyz/Thumbs/Avatar.ashx?type=headshot&userId=${id}`;
+            img.alt = `User ${id} avatar`;
+            li.appendChild(img);
+            list.appendChild(li);
+        });
+    </script>
+</body>
+</html>
